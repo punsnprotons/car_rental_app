@@ -19,7 +19,9 @@ const styles = StyleSheet.create({
     },
     container:{
         marginLeft:5,
-        marginRight:5
+        marginRight:5,
+        backgroundColor:'white',
+        marginBottom:5,
     }
 
 })

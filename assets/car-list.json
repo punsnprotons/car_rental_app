@@ -1,0 +1,72 @@
+ [
+    {
+      "id": 1,
+      "name": "Black Mercedes - S Class",
+      "review": "100+ reviews",
+      "rent": "$1200/day",
+      "image": "mercedes.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Red BMW - 7 Series",
+      "review": "150+ reviews",
+      "rent": "$1100/day",
+      "image": "mercedes.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "White Audi - A8",
+      "review": "120+ reviews",
+      "rent": "$1000/day",
+      "image": "mercedes.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "Silver Lexus - LS",
+      "review": "90+ reviews",
+      "rent": "$900/day",
+      "image": "mercedes.jpeg"
+    },
+    {
+        "id": 5,
+        "name": "Blue Tesla - Model S",
+        "review": "200+ reviews",
+        "rent": "$1500/day",
+        "image": "mercedes.jpeg"
+      },
+      {
+        "id": 6,
+        "name": "Green Jaguar - XJ",
+        "review": "80+ reviews",
+        "rent": "$950/day",
+        "image": "mercedes.jpeg"
+      },
+      {
+        "id": 7,
+        "name": "Yellow Porsche - Panamera",
+        "review": "180+ reviews",
+        "rent": "$1300/day",
+        "image": "mercedes.jpeg"
+      },
+      {
+        "id": 8,
+        "name": "Orange Lamborghini - Aventador",
+        "review": "250+ reviews",
+        "rent": "$2000/day",
+        "image": "mercedes.jpeg"
+      },
+      {
+        "id": 9,
+        "name": "Purple Rolls-Royce - Phantom",
+        "review": "120+ reviews",
+        "rent": "$1800/day",
+        "image": "mercedes.jpeg"
+      },
+      {
+        "id": 10,
+        "name": "Pink Maserati - Quattroporte",
+        "review": "110+ reviews",
+        "rent": "$1600/day",
+        "image": "mercedes.jpeg"
+      }
+  ]
