@@ -3,11 +3,14 @@ import { StyleSheet, Text, View } from 'react-native';
 import IntroScreen from './src/screens/IntroScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import Navigator from './src/navigation';
+import CarDetailScreen from './src/screens/CarDetailScreen';
+
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Navigator/>
+      <CarDetailScreen/>
     </View>
   );
 }
