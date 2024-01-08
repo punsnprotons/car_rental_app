@@ -80,6 +80,7 @@ const styles = StyleSheet.create({
     //marginHorizontal: 10,
     marginRight: 10, // Added marginRight here
     marginBottom:40,
+    paddingVertical:7,
 
   },
   column: {

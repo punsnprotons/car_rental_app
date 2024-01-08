@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
     marginTop: 70,
     marginBottom:30,
     flex: 1,
+    backgroundColor:'white',
   },
   title: {
     fontSize: 20,
