@@ -47,7 +47,7 @@ const AccountScreen = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     marginHorizontal: 10,
-    //marginTop: 70,
+    //marginTop: 150,
   },
   profileImageContainer: {
     alignItems: 'center',

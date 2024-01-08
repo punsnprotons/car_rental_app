@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
         flexDirection:'column',
         backgroundColor:'whitesmoke',
         flex:1,
+        marginTop:70,
     },
     header:{
         //marginTop:80,

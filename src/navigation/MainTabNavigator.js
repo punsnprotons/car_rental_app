@@ -21,15 +21,15 @@ const Stack = createNativeStackNavigator()
 const Tab = createBottomTabNavigator()
 
 const AccountStack = () => (
-    <Stack.Navigator>
-      <Stack.Screen name="Account" component={AccountScreen} />
-      <Stack.Screen name="Profile" component={ProfileScreen} />
-      <Stack.Screen name="Address" component={AddressScreen} />
-      <Stack.Screen name="Orders" component={OrdersScreen} />
-      <Stack.Screen name="Favorites" component={FavoritesScreen} />
-      <Stack.Screen name="Vouchers" component={VouchersScreen} />
-      <Stack.Screen name="Billing" component={BillingScreen} />
-      <Stack.Screen name="Terms" component={NotImplementedScreen} />
+    <Stack.Navigator initialRouteName="Account"  screenOptions={{tabBarStyle:{backgroundColor:'whitesmoke'},headerStyle:{backgroundColor:'whitesmoke'}}}>
+      <Stack.Screen name="Account" component={AccountScreen}  options={{ headerShown: true }}/>
+      <Stack.Screen name="Profile" component={ProfileScreen}  options={{ headerShown: true }}/>
+      <Stack.Screen name="Address" component={AddressScreen}  options={{ headerShown: true }} />
+      <Stack.Screen name="Orders" component={OrdersScreen}   options={{ headerShown: true }}/>
+      <Stack.Screen name="Favorites" component={FavoritesScreen}  options={{ headerShown: true }} />
+      <Stack.Screen name="Vouchers" component={VouchersScreen}  options={{ headerShown: true }}/>
+      <Stack.Screen name="Billing" component={BillingScreen}  options={{ headerShown: false }}/>
+      <Stack.Screen name="Terms" component={NotImplementedScreen}   options={{ headerShown: true }}/>
       {/* Add other screens as needed */}
     </Stack.Navigator>
   );
@@ -46,7 +46,8 @@ const MainTabNavigator = () =>{
             <Tab.Screen 
                 name="Home" 
                 component={NotImplementedScreen} 
-                options={{
+                options={{ 
+                    headerShown: false,
                     tabBarIcon: ({color,size})=> <Octicons name="home" size={30} color={color} style={{paddingTop:3}} />
                     }}
             />
@@ -54,21 +55,26 @@ const MainTabNavigator = () =>{
             <Tab.Screen 
                 name="Explore" 
                 component={ExploreScreen} 
-                options={{tabBarIcon: ({color,size})=> <FontAwesome5 name="compass" size={30} color={color} style={{paddingTop:3}} />
+                options={{
+                    headerShown: false,
+                    tabBarIcon: ({color,size})=> <FontAwesome5 name="compass" size={30} color={color} style={{paddingTop:3}} />
                     }}
             />
 
             <Tab.Screen 
                 name="Messages" 
                 component={NotImplementedScreen} 
-                options={{tabBarIcon: ({color,size})=> <Feather name="message-circle" size={30} color={color} style={{paddingTop:3}} />
+                options={{
+                    headerShown: false,
+                    tabBarIcon: ({color,size})=> <Feather name="message-circle" size={30} color={color} style={{paddingTop:3}} />
                     }}
             />
 
             <Tab.Screen 
-                name="Account" 
+                name="Accounts" 
                 component={AccountStack}  
                 options={{
+                    
                     tabBarIcon: ({color,size})=> <Ionicons name="person-outline" size={30} color={color}/>,
                     headerRight:() => <Entypo name="new-message" size={18} color={'royalblue'} style={{marginRight:15}}/>
             }}

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import { FontAwesome, AntDesign } from '@expo/vector-icons';
 
-const LoginScreen = () => {
+const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -47,7 +47,7 @@ const LoginScreen = () => {
 
       {/* Login Button */}
       <View style={styles.loginButtonContainer}>
-        <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
+        <TouchableOpacity style={styles.loginButton} onPress={()=>navigation.navigate('MainTab')}>
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
       </View>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import { FontAwesome, AntDesign } from '@expo/vector-icons';
 
-const SignupScreen = () => {
+const SignupScreen = ({navigation}) => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -76,7 +76,7 @@ const SignupScreen = () => {
       />
 
       {/* Register Button */}
-      <TouchableOpacity style={styles.registerButton} onPress={handleSignup}>
+      <TouchableOpacity style={styles.registerButton} onPress={() => navigation.navigate('MainTab')}>
         <Text style={styles.buttonText}>Register</Text>
       </TouchableOpacity>
 
