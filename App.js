@@ -14,13 +14,15 @@ import BillingScreen from './src/screens/BillingScreen';
 import FavoritesScreen from './src/screens/FavoritesScreen';
 import CheckoutScreen from './src/screens/CheckoutScreen';
 import ConfirmationScreen from './src/screens/ConfirmationScreen';
+import SignupScreen from './src/screens/SignupScreen';
+import LoginScreen from './src/screens/LoginScreen';
 
 
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <ConfirmationScreen/>
+      <LoginScreen/>
     </View>
   );
 }
