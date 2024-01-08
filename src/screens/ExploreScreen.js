@@ -6,7 +6,7 @@ import SearchBar from '../components/SearchBar'
 import HomeTitle from '../components/HomeTitle'
 import HomeHeader from '../components/HomeHeader'
 
-const HomeScreen = () =>{
+const ExploreScreen = ({navigation}) =>{
     return(
         <View style={styles.container}>
             <View style={styles.header}>
@@ -27,7 +27,7 @@ const HomeScreen = () =>{
                 </View>
 
                 <View style={styles.carList}>
-                    <CarList/>
+                    <CarList handlePress={()=> navigation.navigate('CarDetail')}/>
                 </View>
             </View>
 
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         flex:1,
     },
     header:{
-        marginTop:80,
+        //marginTop:80,
         marginBottom:30,
     },
     title:{
@@ -73,4 +73,4 @@ const styles = StyleSheet.create({
   
 })
 
-export default HomeScreen
+export default ExploreScreen

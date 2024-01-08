@@ -3,7 +3,7 @@ import {FlatList,StyleSheet,View,Text,Button,TouchableOpacity} from 'react-nativ
 import CarListItem from './CarListItem'
 import carListData from '../../assets/car-list.json'
 
-const CarList = () =>{
+const CarList = ({handlePress}) =>{
     return(
         <>
         <View style={styles.container}>
@@ -16,7 +16,7 @@ const CarList = () =>{
             <FlatList
                 horizontal
                 data={carListData}
-                renderItem={({item})=><CarListItem image={item.image} name={item.name} price={item.rent} review={item.review} />}
+                renderItem={({item})=><CarListItem image={item.image} name={item.name} price={item.rent} review={item.review} handlePress={handlePress} />}
             />
         </>
     )

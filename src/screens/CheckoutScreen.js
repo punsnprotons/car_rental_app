@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image,TouchableOpacity } from 'react-native';
 
-const CheckoutScreen = () => {
+const CheckoutScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       {/* Title */}
@@ -56,7 +56,7 @@ const CheckoutScreen = () => {
 
 
       {/* Confirm Button */}
-      <TouchableOpacity style={styles.confirmButton}>
+      <TouchableOpacity style={styles.confirmButton} onPress={()=>navigation.navigate('Confirmation')}>
         <Text style={styles.confirmButtonText}>Confirm</Text>
       </TouchableOpacity>
     </View>
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 10,
-    marginTop: 70,
+    //marginTop: 70,
     backgroundColor:'white',
   },
   title: {

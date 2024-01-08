@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableOpacity,ScrollView } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons'; // You may need to import the appropriate icons
 
 const IM_SIZE = 30;
@@ -7,10 +7,10 @@ const ARROW_SIZE = 20;
 const ARROW_COLOR = 'grey';
 const IM_COLOR ="#007AFF"
 
-const AccountScreen = () => {
+const AccountScreen = ({navigation}) => {
 
-  const renderListItem = (iconName, text) => (
-    <TouchableOpacity style={styles.listItem}>
+  const renderListItem = (iconName, text,nav) => (
+    <TouchableOpacity style={styles.listItem} onPress={()=>navigation.navigate(nav)}>
       <View style={styles.listItemContent}>
         <FontAwesome name={iconName} size={IM_SIZE} color={IM_COLOR} />
         <Text style={styles.listItemText}>{text}</Text>
@@ -31,13 +31,15 @@ const AccountScreen = () => {
       </View>
 
       {/* List of Clickable Items */}
-      {renderListItem('user', 'View Profile')}
-      {renderListItem('map-marker', 'Addresses')}
-      {renderListItem('shopping-basket', 'Orders and Reordering')}
-      {renderListItem('heart', 'Favorites')}
-      {renderListItem('ticket', 'Vouchers and Offers')}
-      {renderListItem('credit-card', 'Billing Information')}
-      {renderListItem('file-text-o', 'Terms & Conditions')}
+      <ScrollView>
+      {renderListItem('user', 'View Profile','Profile')}
+      {renderListItem('map-marker', 'Addresses','Address')}
+      {renderListItem('shopping-basket', 'Orders and Reordering','Orders')}
+      {renderListItem('heart', 'Favorites','Favorites')}
+      {renderListItem('ticket', 'Vouchers and Offers','Vouchers')}
+      {renderListItem('credit-card', 'Billing Information','Billing')}
+      {renderListItem('file-text-o', 'Terms & Conditions','Terms')}
+      </ScrollView>
     </View>
   );
 };
@@ -45,7 +47,7 @@ const AccountScreen = () => {
 const styles = StyleSheet.create({
   container: {
     marginHorizontal: 10,
-    marginTop: 70,
+    //marginTop: 70,
   },
   profileImageContainer: {
     alignItems: 'center',

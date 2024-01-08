@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, FlatList } from 'react-native';
 
-const OrdersScreen = () => {
+const AddressScreen = () => {
   const ordersData = [
     { id: '1', carName: 'Toyota Camry', dateRange: 'Jan 10, 2023 - Jan 15, 2023', totalPrice: 'PKR 20,000' },
     { id: '2', carName: 'Honda Accord', dateRange: 'Feb 5, 2023 - Feb 10, 2023', totalPrice: 'PKR 100,000' },
@@ -119,4 +119,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default OrdersScreen;
+export default AddressScreen;

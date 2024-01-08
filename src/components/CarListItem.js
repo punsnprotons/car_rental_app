@@ -3,9 +3,9 @@ import {Text,View,TouchableOpacity,Image,StyleSheet} from 'react-native'
 import { AntDesign } from '@expo/vector-icons'; 
 
 
-const CarListItem = ({image,name,price,review}) =>{
+const CarListItem = ({image,name,price,review,handlePress}) =>{
     return (
-        <TouchableOpacity style={styles.container}>
+        <TouchableOpacity style={styles.container} onPress={handlePress}>
             <Image style={styles.carImage} source={require('../../assets/mercedez.jpeg')} />
             <Text style={styles.carTitle}>{name}</Text>
             <View style={styles.detailContainer}>

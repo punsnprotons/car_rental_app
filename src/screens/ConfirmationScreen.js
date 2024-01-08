@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons'; // Import the appropriate icon library
 
-const ConfirmationScreen = () => {
+const ConfirmationScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       {/* Screen Title */}
@@ -22,7 +22,7 @@ const ConfirmationScreen = () => {
       </Text>
 
       {/* Back to Home Button */}
-      <TouchableOpacity style={styles.backToHomeButton}>
+      <TouchableOpacity style={styles.backToHomeButton} onPress={()=>navigation.navigate('Explore')}>
         <Text style={styles.buttonText}>Back to Home</Text>
       </TouchableOpacity>
     </View>
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 150,
+    marginBottom: 50,
   },
   confirmIconContainer: {
     marginBottom: 20,
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   subtext: {
     fontSize: 12,
     textAlign: 'center',
-    marginBottom: 20,
+    marginBottom: 50,
     color:'gray',
     marginHorizontal:25,
   },
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     paddingHorizontal: 30,
     borderRadius: 8,
-    marginTop:300,
+    //marginTop:300,
     width:'100%',
     justifyContent:'center',
   },

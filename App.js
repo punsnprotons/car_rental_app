@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import IntroScreen from './src/screens/IntroScreen';
-import HomeScreen from './src/screens/HomeScreen';
+import HomeScreen from './src/screens/ExploreScreen';
 import Navigator from './src/navigation';
 import CarDetailScreen from './src/screens/CarDetailScreen'
 import BookingScreen from './src/screens/BookingScreen';
@@ -22,7 +22,7 @@ import LoginScreen from './src/screens/LoginScreen';
 export default function App() {
   return (
     <View style={styles.container}>
-      <LoginScreen/>
+      <Navigator/>
     </View>
   );
 }

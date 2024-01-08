@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-const DetailFooter = () => {
+const DetailFooter = ({handlePress}) => {
   return (
     <View style={styles.container}>
       <View style={styles.leftColumn}>
@@ -9,7 +9,7 @@ const DetailFooter = () => {
         <Text style={styles.smallText}>/ hour</Text>
       </View>
 
-      <TouchableOpacity style={styles.rightColumn}>
+      <TouchableOpacity style={styles.rightColumn} onPress={handlePress}>
         <Text style={styles.continueButton}>Continue</Text>
       </TouchableOpacity>
     </View>

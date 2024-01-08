@@ -13,13 +13,13 @@ import Plan from '../components/Plan';
 //Detail Plan 
 //Footer 
 
-const CarDetailScreen = () =>{
+const CarDetailScreen = ({navigation}) =>{
     return (
         <ScrollView style={styles.container}>
             <DetailIntro/>
             <DetailInfo/>
             <DetailSpecs/>
-            <DetailFooter/>
+            <DetailFooter handlePress={()=> navigation.navigate('Checkout')}/>
         </ScrollView>
     )
 }

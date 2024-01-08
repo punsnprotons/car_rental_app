@@ -1,26 +1,27 @@
 import {NavigationContainer} from '@react-navigation/native'
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
+import {createNativeStackNavigator} from '@react-navigation/native-stack'
+import MainTabNavigator from './MainTabNavigator'
+import { View, Text } from 'react-native'
 import React from 'react'
-import HomeScreen from '../screens/HomeScreen'
-import NotImplementedScreen from '../screens/NotImplementedScreen'
-import {Ionicons,Entypo,MaterialIcons} from '@expo/vector-icons'
+import CarDetailScreen from '../screens/CarDetailScreen'
+import CheckoutScreen from '../screens/CheckoutScreen'
+import ConfirmationScreen from '../screens/ConfirmationScreen'
+//import ChatsScreen from '../screens/ChatsScreen'
+//import ChatScreen from '../screens/ChatScreen'
 
-
-
-const Tab = createBottomTabNavigator()
+const Stack = createNativeStackNavigator()
 
 const Navigator = () => {
-    return (
-      <NavigationContainer>
-       <Tab.Navigator>
-            <Tab.Screen name="Home" component={HomeScreen} options={{headerShown: false, tabBarIcon: ({color,size})=> <MaterialIcons name="explore" size={size} color={color}/>}}/>
-            <Tab.Screen name="Favorites" component={NotImplementedScreen} options={{headerShown: false,tabBarIcon: ({color,size})=> <MaterialIcons name="favorite" size={size} color={color} />}}/>
-            <Tab.Screen name="Notifications" component={NotImplementedScreen} options={{ headerShown: false, tabBarIcon: ({color,size})=> <Ionicons name="notifications" size={size} color={color}/>}}/>
-            <Tab.Screen name="Profile" component={NotImplementedScreen} options={{headerShown: false, tabBarIcon: ({color,size})=> <Ionicons name="person" size={size} color={color}/>}}/>
-        </Tab.Navigator>
-      </NavigationContainer>
-    )
-  }
+  return (
+    <NavigationContainer>
+        <Stack.Navigator screenOptions={{headerStyle:{backgroundColor:'whitesmoke'}}}>
+            <Stack.Screen name='Home' component={MainTabNavigator} options={{headerShown:false}}/>
+            <Stack.Screen name='CarDetail' component={CarDetailScreen}/>
+            <Stack.Screen name='Checkout' component={CheckoutScreen}/>
+            <Stack.Screen name='Confirmation' component={ConfirmationScreen}/>
+        </Stack.Navigator>
+    </NavigationContainer>
+  )
+}
 
-
-  export default Navigator
+export default Navigator

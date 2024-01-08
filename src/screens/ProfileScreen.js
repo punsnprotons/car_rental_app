@@ -52,7 +52,7 @@ const ProfileScreen = () => {
 const styles = StyleSheet.create({
   container: {
     marginHorizontal: 10,
-    marginTop: 70,
+    //marginTop: 70,
   },
   box: {
     flexDirection: 'row',
