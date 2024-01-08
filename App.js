@@ -12,13 +12,15 @@ import OrdersScreen from './src/screens/OrdersScreen';
 import VouchersScreen from './src/screens/VouchersScreen';
 import BillingScreen from './src/screens/BillingScreen';
 import FavoritesScreen from './src/screens/FavoritesScreen';
+import CheckoutScreen from './src/screens/CheckoutScreen';
+import ConfirmationScreen from './src/screens/ConfirmationScreen';
 
 
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <FavoritesScreen/>
+      <ConfirmationScreen/>
     </View>
   );
 }
@@ -26,7 +28,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'whitesmoke',
+    backgroundColor: 'white',
     //justifyContent: 'center',
   }
   
